@@ -1,0 +1,48 @@
+<section class="main-container">
+  <div class="form-container">
+    <div class="title-container">
+      <span class="title"> Register form! </span>
+    </div>
+    <form (ngSubmit)="register()">
+      <div class="register-form">
+        <input
+          [(ngModel)]="user.email"
+          type="text"
+          id="email"
+          name="email"
+          placeholder="Email"
+        />
+      </div>
+      <div class="register-form">
+        <input
+          [(ngModel)]="user.username"
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Username"
+        />
+      </div>
+      <div class="register-form">
+        <input
+          [(ngModel)]="user.password"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Password"
+        />
+      </div>
+      <div class="button-container">
+        <button type="submit">Register</button>
+      </div>
+      <div class="register-container">
+        <span class="info">Do you already have an account?</span>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Sign In</a
+        >
+      </div>
+    </form>
+  </div>
+</section>

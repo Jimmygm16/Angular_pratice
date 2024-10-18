@@ -1,0 +1,44 @@
+<section class="main-container">
+  <div class="div">
+    <img class="login_img" src="/rb_739.png" alt="login_img" />
+  </div>
+  <div class="login-container">
+    <div class="form-container">
+      <div class="title-container">
+        <span class="title">App login</span>
+      </div>
+      <form (ngSubmit)="onLogin()" >
+        <div class="login-form">
+          <input
+            [(ngModel)]="user.username"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username"
+          />
+        </div>
+        <div class="login-form">
+          <input
+            [(ngModel)]="user.password"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <div class="button-container">
+          <button type="submit" >Continue</button>
+        </div>
+        <div class="register-container">
+          <span class="info">Don't you have an account yet?</span>
+          <a
+            routerLink="/register"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Create your account</a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

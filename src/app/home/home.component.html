@@ -1,0 +1,25 @@
+<header *ngIf="token">
+    <h1 class="">Welcome to our Company</h1>
+    <div class="header-content">
+      <a (click)="logOut()">Cerrar sesión</a>
+    </div>
+  </header>
+  <section class="home-container" *ngIf="token">
+    <h1 class="title">Home</h1>
+    <p>
+      Hello! <span class="username">{{ username }}</span>, welcome to our page
+    </p>
+    <p>Here you can find some information about our company and our products.</p>
+    <p>Feel free to browse our site and contact us if you have any questions.</p>
+    <p>Thank you for visiting us!</p>
+    <p>Have a great day!</p>
+    <p>Best regards,</p>
+    <p>The Team</p>
+  </section>
+  
+  <!-- Si no hay token, redirigir a la página de inicio de sesión -->
+  <ng-container *ngIf="!token">
+    <p>Redirigiendo a la página de inicio de sesión...</p>
+    <ng-container *ngIf="redirectToLogin()"></ng-container>
+  </ng-container>
+  
